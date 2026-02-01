@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
     const secretData = response.data;
     res.render(__dirname + '/views/index.ejs', {
         secret: secretData.secret,
-        username: secretData.username
+        user: secretData.username
     });
   } catch (error) {
     res.status(500).send('Error fetching secret');
